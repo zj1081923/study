@@ -45,11 +45,9 @@ bool check_valid_xy(int x, int y){
 }
 
 void moving_on_map(int dir_order[]){
-	int cur_dir, tmp_x, tmp_y;
+	int cur_dir;
 	for(int i=0; i<dir_num; i++){
 		cur_dir = dir_order[i];
-		tmp_x = x+dir_x[cur_dir-1];
-		tmp_y = y+dir_y[cur_dir-1];
 		if(check_valid_xy(x+dir_x[cur_dir-1], y+dir_y[cur_dir-1])){
 			if(map[x][y]==0) map[x][y] = dice[0];
 			else{
