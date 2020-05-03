@@ -7,11 +7,13 @@ int chicken_loc_y[13];
 int chicken_num=0; // ㅊ ㅣ킨 개수 저장
 int house_num=0; // 집 개수 저장
 int MIN = 1000000;
+//pair<int, int> cl[13];
 
 int get_min_distance(int select_num, int selected_chicken[], int x, int y){
 	int i, j, dist=1000000, tmp_dist;
 	for(i=0; i<select_num; i++){
 		tmp_dist = abs(x-chicken_loc_x[selected_chicken[i]])+abs(y-chicken_loc_y[selected_chicken[i]]);
+		//tmp_dist = abs(x-cl[i].first)+abs(y-cl[i].second);
 		if(tmp_dist < dist) dist = tmp_dist;
 	}
 	return dist;
@@ -86,6 +88,8 @@ int main()
 			if (city[i][j] == 2){
 				chicken_loc_x[chicken_num] = i;
 				chicken_loc_y[chicken_num] = j;
+				//cl[chicken_num].first = i;
+				//cl[chicken_num].second = j;
 				chicken_num++;
 			}
 			else if(city[i][j] == 1){
