@@ -56,7 +56,7 @@ void moving_on_map(int dir_order[]){
 			}
 			x = x+dir_x[cur_dir-1];
 			y = y+dir_y[cur_dir-1];
-			change_dice(cur_dir);
+			change_dice(cur_dir); 
 			cout << dice[5] << endl;
 		}
 	}
