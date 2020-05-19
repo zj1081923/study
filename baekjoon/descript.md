@@ -1,7 +1,7 @@
 ***
 # 3190. 뱀
 
-```
+```cpp
 typedef struct Snake{
 	Snake(int l, int d) : length(l), dir(d) {}
 	queue<pair<int,int>> body;
@@ -13,12 +13,12 @@ typedef struct Snake{
 * length: 뱀의 전체 길이
 * dir: 뱀의 방향(UP, RIGHT, DOWN, LEFT)
 
-	vector<pair<int,char>> snake_dir_info;
+	`vector<pair<int,char>> snake_dir_info;`
 
 * input으로 받아올 뱀의 방향 변환 정보를 저장. pair의 first에는 초, second에는 방향(왼쪽, 오른쪽)   
 
 
-	int Dummy_start(Snake snake)
+	`int Dummy_start(Snake snake)`
 
 while loop를 돌며 map을 수정
 0: 빈칸, 1: 뱀, 9: 사과
