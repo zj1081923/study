@@ -63,25 +63,25 @@ while loop를 돌며 map을 수정
 3. `pair p` 배열에 숫자와 숫자의 개수를 저장한다.
 ```cpp
 while(!v.empty()){
-			if(v.back() == cur){
-				p[loc].second++;
-			}else{
-				loc++;
-				p[loc].first = v.back();
-				p[loc].second = 1;
-			}
-			cur = v.back();
-			v.pop_back();
-		}
+	if(v.back() == cur){
+		p[loc].second++;
+	}else{
+		loc++;
+		p[loc].first = v.back();
+		p[loc].second = 1;
+	}
+	cur = v.back();
+	v.pop_back();
+}
 ```
 `p[x].first`에는 숫자가, `p[x].second`에는 개수가 저장된다.
 4. `pair p`배열을 second를 우선순위로 정렬한다.
 5. `pair p` 배열을 이용해 `arr`배열에 업데이트 한다.
 6. `max_len`을 구하고 `row_len`(행 크기)를 max_len으로 업데이트한다.
 ```cpp
-		max_len = max(max_len, rlength[i]);
-		max_len = min(max_len, 100); // 100을 넘지 않도록
-		row_len = max_len;
+max_len = max(max_len, rlength[i]);
+max_len = min(max_len, 100); // 100을 넘지 않도록
+row_len = max_len;
 ```
 7. rlength 이후부터 업데이트 된 row size까지 0을 추가한다.
 
