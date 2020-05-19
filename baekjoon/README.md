@@ -5,6 +5,7 @@
 
 ***
 <a name="3190"/>
+
 # 3190. 뱀
 
 ```cpp
@@ -42,8 +43,9 @@ while loop를 돌며 map을 수정
 	`int Dummy_start(Snake snake)`
 ***
 <a name="17140"/>
-# 17140. 이차원 배열과 연산
 
+# 17140. 이차원 배열과 연산
+    
 	`int array_sorting()`
 
 `arr[r][c]=k`가 될 때까지 아래를 반복한다.
