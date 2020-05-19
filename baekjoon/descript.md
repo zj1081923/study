@@ -1,3 +1,8 @@
+## Contents
+* [3190. 뱀](#3100)
+
+
+<a name="3190" />
 ***
 # 3190. 뱀
 
@@ -20,7 +25,7 @@ typedef struct Snake{
 
 	`int Dummy_start(Snake snake)`
 
-while loop를 돌며 map을 수정
+while loop를 돌며 map을 수정  
 0: 빈칸, 1: 뱀, 9: 사과
 1. 현재 방향에 따라 머리가 위치하게 될 좌표를 구한다.
 2. 좌표가 유효한지 확인한다.
