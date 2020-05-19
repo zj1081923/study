@@ -45,8 +45,8 @@ while loop를 돌며 map을 수정
 <a name="17140"/>
 
 # 17140. 이차원 배열과 연산
-    
-	`int array_sorting()`
+
+`int array_sorting()`
 
 `arr[r][c]=k`가 될 때까지 아래를 반복한다.
 1. `row의 길이 ≥ col의 길이`이면 `R_calculate()` R 연산 실행
