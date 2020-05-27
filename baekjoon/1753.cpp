@@ -36,6 +36,7 @@ int main()
 
 	priority_queue<pair<int, int>, vector<pair<int, int>>, compare> h;
 	h.push(make_pair(K, dist[K]));
+	//emplace 사용
 
 	while(!h.empty()){
 		pair<int,int> t = h.top();
