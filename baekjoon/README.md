@@ -1,4 +1,5 @@
 ## Contents
+* [1753. 최단경로](#1753)
 * [3190. 뱀](#3190)
 * [17140. 이차원 배열과 연산](#17140)
 
@@ -87,3 +88,24 @@ row_len = max_len;
 
   
 `R_calculate()`도 동일하다.
+
+***
+<a name="1753"/>
+
+# 1753. 최단경로
+
+간선 정보를 저장할 2차원 배열을 만들었더니 노드가 최대 20000개여서 크기가 너무 컸다.
+`vector<pair<int, int>> adj_node[V];`
+로 간선 정보를 저장했다. `adj_node[i][j].first`는 i 노드와 인접한 노드 숫자이고, `adj_node[i][j].second`는 i 노드에서 인접한 노드까지의 가중치이다.   
+
+```cpp
+int dist[V]; fill_n(dist, V, INF);
+dist[K] = 0;
+```
+`dist`에는 K에서 출발해서 해당 노드까지 도달했을 때 드는 최소 비용을 저장한다.   
+
+`priority_queue<pair<int, int>, vector<pair<int, int>>, compare> h;`
+first에 노드 번호, second에 가중치를 저장한다. 우선순위는 second로 두었다.
+1. `h`의 top 노드를 빼고, 인접한 노드들을 돌면서 w를 계산한다.
+2. 계산된 w가 저장된 `dist`보다 작다면 업데이트하고, `h`에 정보를 push한다.   
+h가 빌때까지 위 과정을 반복한다.
