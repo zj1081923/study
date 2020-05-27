@@ -75,10 +75,10 @@ while(!v.empty()){
 	v.pop_back();
 }
 ```
-`p[x].first`에는 숫자가, `p[x].second`에는 개수가 저장된다.
-4. `pair p`배열을 second를 우선순위로 정렬한다.
-5. `pair p` 배열을 이용해 `arr`배열에 업데이트 한다.
-6. `max_len`을 구하고 `row_len`(행 크기)를 max_len으로 업데이트한다.
+`p[x].first`에는 숫자가, `p[x].second`에는 개수가 저장된다.   
+ 4. `pair p`배열을 second를 우선순위로 정렬한다.   
+ 5. `pair p` 배열을 이용해 `arr`배열에 업데이트 한다.   
+ 6. `max_len`을 구하고 `row_len`(행 크기)를 max_len으로 업데이트한다.   
 ```cpp
 max_len = max(max_len, rlength[i]);
 max_len = min(max_len, 100); // 100을 넘지 않도록
