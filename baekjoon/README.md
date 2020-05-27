@@ -104,7 +104,7 @@ dist[K] = 0;
 ```
 `dist`에는 K에서 출발해서 해당 노드까지 도달했을 때 드는 최소 비용을 저장한다.   
 
-`priority_queue<pair<int, int>, vector<pair<int, int>>, compare> h;`
+`priority_queue<pair<int, int>, vector<pair<int, int>>, compare> h;`   
 first에 노드 번호, second에 가중치를 저장한다. 우선순위는 second로 두었다.
 1. `h`의 top 노드를 빼고, 인접한 노드들을 돌면서 w를 계산한다.
 2. 계산된 w가 저장된 `dist`보다 작다면 업데이트하고, `h`에 정보를 push한다.   
